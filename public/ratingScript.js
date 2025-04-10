@@ -5,10 +5,10 @@ form.addEventListener("submit", async (e)=>{
 e.preventDefault()
 const formData = new FormData(form)
 const reqBody = Object.fromEntries(formData)
-const response = await fetch('/add/rating', {
+const response = await fetch("/add/rating", {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data),
+    body: JSON.stringify(reqBody),
  
   });
 const data = await response.json()
